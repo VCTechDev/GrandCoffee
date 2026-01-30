@@ -56,8 +56,8 @@ a{
 }
 
 .btn1:hover{
-    color: rgb(15, 15, 15);
-    background-color:rgb(228, 136, 103);
+    /* color: rgb(15, 15, 15); */
+    background-color:#e85830;
 }
 
 /*------------------ Header Layout------------------ */
@@ -84,38 +84,39 @@ header{
     color: white;
     font-size: 25px;
     cursor: pointer;
+    position: relative;
     
 }
 
 .nav{
     display: none;
-    width: 100%;
-    flex-direction: column;
-    position: static;
-   
+    position: absolute;
+    top: 69px;
+    right: 0;
+    left: auto;
+    /* width: 100%; */
 }
 
 .nav ul{
     display: flex;
     flex-direction: column;
-    background: #272727;
+    background-color: #272727;
+    align-items: flex-end;
+
 }
 
 .nav a{
     display: block;
-    padding: 16px;
+    padding: 16px 24px;
     color:white;
     text-decoration: none;
+    text-align: right;
 }
 
 .nav.is-open{
     display: flex;
 
 }
-
-
-
-
 
 header a:hover{
     color: #f76d37;
@@ -209,6 +210,26 @@ header i{
 
 @media (min-width:1024px){
 
+    .menu-toggle{
+        display: none;
+    }
+
+    .nav{
+        display: block;
+        position: static;
+        width: auto;
+    }
+
+    .nav ul{
+        flex-direction: row;
+        align-items: center;
+        gap: 22px;
+        background-color: transparent;
+        font-size: 17px;
+    }
+
+    
+
     #home{
         min-height: 80vh;
     }
@@ -245,37 +266,39 @@ header i{
 
 /* ---------------------- About section----------------------- */
 
-#about{
-    background-color: white;
-    padding: 100px 0;
-}
 
-.about-container{
+.about-wrapper{
     display: flex;
-    align-items: center;
-    gap: 50px;   
+    flex-direction: column;
+    gap: 32px;
 }
 
-.about-text{
-    flex:1;
+.section_heading{
+    font-size: 30px;
+    color: #e85830;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 24px;
 }
 
 .about-image{
-    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .about-image img{
+    max-width: 330px;
     width: 100%;
-    max-width: 500px;
 }
-.about-text h2{
-    font-size: 40px;
-    color:#f76d37 ;
-    font-weight: bold;
+
+.about-content{
+    text-align: center;
+    max-width: 100%;
 }
-.about-text p{
-    font-size: 17px;
-    margin-top: 15px;
+
+.about-content p{
+    line-height: 1.6;
+
 }
 
 /*----------------------------- Gallery section------------------------------ */
