@@ -194,72 +194,6 @@ header i{
     background-color: #e85830;
 }
 
-@media (min-width:768px){
-    .hero-title{
-        font-size: 56px;
-    }
-    
-    .hero-eyebrow{
-        font-size: 40px;
-    }
-
-    .hero-description{
-        font-size: 17px;
-    }
-}
-
-@media (min-width:1024px){
-
-    .menu-toggle{
-        display: none;
-    }
-
-    .nav{
-        display: block;
-        position: static;
-        width: auto;
-    }
-
-    .nav ul{
-        flex-direction: row;
-        align-items: center;
-        gap: 22px;
-        background-color: transparent;
-        font-size: 17px;
-    }
-
-    
-
-    #home{
-        min-height: 80vh;
-    }
-    .hero{
-        display: flex;
-        gap: 48px;  
-        max-width: 100%;     
-    }
-
-    .hero-content{
-        flex: 1;
-        /* max-width: 560px; */
-    }
-
-    .hero-title{
-        font-size: 70px;
-    }
-
-    .hero-eyebrow{
-        font-size: 55px;
-    }
-
-    .hero-description{
-        font-size: 18px;
-    }
-
-    .hero-visual{
-        flex: 1;
-    }
-}
 
 
 
@@ -278,7 +212,7 @@ header i{
     color: #e85830;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 54px;
 }
 
 .about-image{
@@ -300,6 +234,100 @@ header i{
     line-height: 1.6;
 
 }
+
+
+@media (min-width:768px){
+
+    /*-- hero section-- */
+    .hero-title{
+        font-size: 56px;
+    }
+    
+    .hero-eyebrow{
+        font-size: 40px;
+    }
+
+    .hero-description{
+        font-size: 17px;
+    }
+
+
+    /*-- about section-- */
+    .section_heading{
+        font-size: 40px;
+    }
+
+    .about-image img{
+        max-width: 450px;
+    }
+
+    .about-content {
+        max-width: 600px;
+        font-size: 17px;
+        margin: 0 auto;
+    }
+
+
+
+}
+
+@media (min-width:1024px){
+
+    /* --header section-- */
+
+    .menu-toggle{
+        display: none;
+    }
+
+    .nav{
+        display: block;
+        position: static;
+        width: auto;
+    }
+
+    .nav ul{
+        flex-direction: row;
+        align-items: center;
+        gap: 22px;
+        background-color: transparent;
+        font-size: 17px;
+    }
+
+    /* --hero section-- */
+
+    #home{
+        min-height: 80vh;
+    }
+    .hero{
+        display: flex;
+        gap: 48px;  
+        max-width: 100%;     
+    }
+
+    .hero-content{
+        flex: 1;
+    }
+
+    .hero-title{
+        font-size: 70px;
+    }
+
+    .hero-eyebrow{
+        font-size: 55px;
+    }
+
+    .hero-description{
+        font-size: 18px;
+    }
+
+    .hero-visual{
+        flex: 1;
+    }
+
+    /* -- about section -- */
+    
+}
+
 
 /*----------------------------- Gallery section------------------------------ */
 
