@@ -477,6 +477,7 @@ header i{
     }
 
     .service-item:hover{
+        background-color: whitesmoke;
         transform: translateY(-6px);
         box-shadow: 0 12px 30px rgba(0,0,0,0.12);
     }
@@ -485,11 +486,6 @@ header i{
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
-    }
-
-    .btn1:hover{
-        background-color: #ffffff;
-        color: #111;
     }
 
 }
