@@ -432,8 +432,129 @@ header i{
 .service-description{
     text-align: center;
     line-height: 1.6;
+    margin: 0 auto 40px;
 }
 
+.services-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.service-item{
+    background-color:#f76d37;
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.service-item img{
+   max-width: 100px;
+   margin-bottom: 20px;
+}
+
+.service-item h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.service-item p{
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.service-item .btn1{
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease,transform 0.3s ease;
+}
+
+@media (hover: hover){
+    .service-item{
+        transition: transform 0.3s ease,box-shadow 0.3s ease;
+    }
+
+    .service-item:hover{
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .service-item:hover .btn1{
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .btn1:hover{
+        background-color: #ffffff;
+        color: #111;
+    }
+
+}
+
+
+@media (min-width:768px){
+    .section_heading{
+        font-size: 40px;
+    }
+
+    .service-description{
+        font-size: 17px;
+    }
+
+    .services-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-item{
+        padding: 48px 32px;
+    }
+
+    .service-item img{
+        max-width: 150px;
+    }
+
+    .service-item h3{
+        font-size: 25px;
+    }
+
+    .service-item p{
+        font-size: 17px;
+    }
+}
+
+@media (min-width:1024px){
+    .section_heading{
+        font-size: 55px;
+    }
+
+    .service-description{
+        font-size: 18px;
+        line-height: 1.9;
+    }
+
+    .services-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .service-item{
+        padding: 56px 32px;
+    }
+
+    .service-item img{
+        max-width: 170px;
+    }
+
+    .service-item h3{
+        font-size: 27px;
+    }
+
+    .service-item p{
+        font-size: 18px;
+    }
+}
 
 
 
