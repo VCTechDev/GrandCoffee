@@ -138,7 +138,25 @@ header i{
 }
 
 
+@media (min-width:1024px){
+    .menu-toggle{
+        display: none;
+    }
 
+    .nav{
+        display: block;
+        position: static;
+        width: auto;
+    }
+
+    .nav ul{
+        flex-direction: row;
+        align-items: center;
+        gap: 22px;
+        background-color: transparent;
+        font-size: 17px;
+    }
+}
 
 /*----------------------- home section---------------------- */
 
@@ -195,7 +213,52 @@ header i{
 }
 
 
+@media (min-width:768px) {
+    .hero-title{
+        font-size: 56px;
+    }
+    
+    .hero-eyebrow{
+        font-size: 40px;
+    }
 
+    .hero-description{
+        font-size: 17px;
+    }
+} 
+
+@media (min-width:1024px) {
+
+    #home{
+        min-height: 80vh;
+    }
+    .hero{
+        display: flex;
+        gap: 48px;  
+        max-width: 100%;     
+    }
+
+    .hero-content{
+        flex: 1;
+    }
+
+    .hero-title{
+        font-size: 70px;
+    }
+
+    .hero-eyebrow{
+        font-size: 55px;
+    }
+
+    .hero-description{
+        font-size: 18px;
+    }
+
+    .hero-visual{
+        flex: 1;
+    }
+
+}
 
 
 /* ---------------------- About section----------------------- */
@@ -232,27 +295,13 @@ header i{
 
 .about-content p{
     line-height: 1.6;
+    text-align: justify;
 
 }
 
 
 @media (min-width:768px){
 
-    /*-- hero section-- */
-    .hero-title{
-        font-size: 56px;
-    }
-    
-    .hero-eyebrow{
-        font-size: 40px;
-    }
-
-    .hero-description{
-        font-size: 17px;
-    }
-
-
-    /*-- about section-- */
     .section_heading{
         font-size: 40px;
     }
@@ -266,186 +315,128 @@ header i{
         font-size: 17px;
         margin: 0 auto;
     }
-
-
-
 }
 
 @media (min-width:1024px){
-
-    /* --header section-- */
-
-    .menu-toggle{
-        display: none;
-    }
-
-    .nav{
-        display: block;
-        position: static;
-        width: auto;
-    }
-
-    .nav ul{
+    
+    .about-wrapper{
         flex-direction: row;
-        align-items: center;
-        gap: 22px;
-        background-color: transparent;
-        font-size: 17px;
+        gap: 42px;
     }
 
-    /* --hero section-- */
-
-    #home{
-        min-height: 80vh;
-    }
-    .hero{
-        display: flex;
-        gap: 48px;  
-        max-width: 100%;     
-    }
-
-    .hero-content{
-        flex: 1;
-    }
-
-    .hero-title{
-        font-size: 70px;
-    }
-
-    .hero-eyebrow{
+    .section_heading{
         font-size: 55px;
     }
 
-    .hero-description{
+    .about-content p{
         font-size: 18px;
+        line-height: 1.9;
     }
 
-    .hero-visual{
+    .about-image{
         flex: 1;
     }
 
-    /* -- about section -- */
-    
+    .about-content{
+        flex: 1;
+        text-align: left;
+    }
 }
 
 
 /*----------------------------- Gallery section------------------------------ */
 
-#gallery{
-    background-color: white;
-    padding: 100px 0;
+.gallery-description{
+    text-align: justify;
+    max-width: 700px;
+    font-size: 1.6;
+    margin: 0 auto 40px;
 }
 
-.gallery-container{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    align-items: center;
+.gallery-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
 }
 
-.gallery-text{
-    max-width: 800px;
-    margin: 0 auto;
+.gallery-item{
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.8s ease-in-out;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-actions{
+    margin-top: 48px;
     text-align: center;
 }
 
-.gallery-text h2{
-     font-size: 40px;
-     color:#f76d37 ;
-     font-weight: 900;
-     margin-bottom: 15px;
+@media (hover: hover){
+    .gallery-item{
+        transition: box-shadow 0.7s ease;
+    }
+
+    .gallery-item:hover{
+        transform: scale(1.03);
+    }
+
+    .gallery-item:hover{
+        box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+    }
+
+    .gallery-item img:hover{
+        background-image: url("../images/icons/search-icon.png");
+    }
 }
 
-.gallery-text p{
-    font-size: 17px;
-    line-height: 1.6;
+@media (min-width:768px){
+    .section_heading{
+        font-size: 40px;
+    }
+
+    .gallery-description{
+        font-size: 17px;
+    }
+
+
+    .gallery-grid{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-.gallery-image{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    width: 100%;
+@media (min-width:1024px){
+    .section_heading{
+        font-size: 55px;
+    }
+
+    .gallery-description{
+        font-size: 18px;
+        line-height: 1.9;
+    }
+
+    .gallery-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
-.gallery-image img{
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    display: block;
-}
 
-.gallery-image img::before{
-    
-}
 
 /*------------------------------- Service section--------------------------------- */
 
-#services{
-    background: transparent;
-    padding: 100px 0;
-    
-}
-
-#services .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.service-text{
-    max-width: 800px;
+.service-description{
     text-align: center;
-    margin: 20px auto;
-    padding: 20px;
-    color: white;
+    line-height: 1.6;
 }
 
-.service-text h2{
-    font-size: 40px;
-    font-weight: 900px;
-    /* color:white; */
-}
 
-.service-text p{
-    font-size: 17px;
-    line-height: 1;
-}
-.service-card-container{
-    display: flex;
-    gap: 10px;
-    
-}
 
-.service-card-items{
-    background-color: #f76d37;
-    text-align: center;
-    color: white;
-    margin: 10px;
-    padding: 30px;
-}
 
-.service-card-items h3{
-    font-size: 30px;
-}
-.service-card-items img{
-    width: 100%;
-    max-width: 50px;
-    margin-top: 40px;
-}
-
-.service-card-items .btn1{
-    display: none;
-}
-
-.service-card-items:hover{
-    background-color: white;
-    color: black;
-}
-
-.service-card-items:hover .btn1{
-    display:inline-block;
-}
 
 /*-------------------------------------------------- Testimonial section---------------------------------------------- */
 
