@@ -740,8 +740,57 @@ header i{
 
 /*------------------------------- footer section--------------------------------- */
 
+#footer{
+    background: #1f1c1c;
+    color: #ffffff;
+}
 
+.footer-grid{
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 32px;
+}
 
+.footer-grid-item{
+    text-align: center;
+}
 
+.footer-grid-item h3{
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.footer-grid-item ul li{
+    margin-bottom: 8px;
+}
+
+.footer-grid-item ul a{
+    color: #ffffff;
+}
+
+@media (min-width:768px){
+    .footer-grid{
+        grid-template-columns: repeat(2,1fr);
+        text-align: left;
+    }
+
+    .footer-grid-item{
+        text-align: left;
+    }
+}
+
+@media (min-width:1024px){
+    .footer-grid{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+}
+
+.footer-bottom{
+    background-color: white;
+    color: #111;
+    text-align: center;
+    padding: 20px;
+}
 
 
