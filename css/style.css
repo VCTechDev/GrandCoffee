@@ -16,7 +16,7 @@ body{
     font-size: 14px;
     font-family: "poppins",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
-    /* background-image: url("../images/hero/services-bg.png"); */
+    background-image: url("../images/hero/services-bg.png");
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -58,6 +58,18 @@ a{
 .btn1:hover{
     /* color: rgb(15, 15, 15); */
     background-color:#e85830;
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /*------------------ Header Layout------------------ */
@@ -168,6 +180,7 @@ header i{
     background-position:center ;
     min-height: 60vh;
     align-items: center;
+    background-color: white;
 }
 
 
@@ -263,6 +276,9 @@ header i{
 
 /* ---------------------- About section----------------------- */
 
+#about{
+    background: white;
+}
 
 .about-wrapper{
     display: flex;
@@ -346,6 +362,9 @@ header i{
 
 /*----------------------------- Gallery section------------------------------ */
 
+#gallery{
+    background: white;
+}
 .gallery-description{
     text-align: justify;
     max-width: 700px;
@@ -396,9 +415,6 @@ header i{
 }
 
 @media (min-width:768px){
-    .section_heading{
-        font-size: 40px;
-    }
 
     .gallery-description{
         font-size: 17px;
@@ -411,9 +427,6 @@ header i{
 }
 
 @media (min-width:1024px){
-    .section_heading{
-        font-size: 55px;
-    }
 
     .gallery-description{
         font-size: 18px;
@@ -429,7 +442,12 @@ header i{
 
 /*------------------------------- Service section--------------------------------- */
 
+#services .section_heading{
+    color:#f76d37;
+}
+
 .service-description{
+    color: #111;
     text-align: center;
     line-height: 1.6;
     margin: 0 auto 40px;
@@ -492,9 +510,6 @@ header i{
 
 
 @media (min-width:768px){
-    .section_heading{
-        font-size: 40px;
-    }
 
     .service-description{
         font-size: 17px;
@@ -522,9 +537,6 @@ header i{
 }
 
 @media (min-width:1024px){
-    .section_heading{
-        font-size: 55px;
-    }
 
     .service-description{
         font-size: 18px;
@@ -558,137 +570,177 @@ header i{
 /*-------------------------------------------------- Testimonial section---------------------------------------------- */
 
 #testimonial{
-    background-color: white;
-    padding: 100px 0;
+    background: white;
 }
 
-.testimonial-text{
-    max-width: 800px;
-}
-
-.testimonial-text h2{
-    font-size: 40px;
-    font-weight: 900px;
-    color: #f76d37;
-}
-
-.testimonial-text p{
-    font-size: 17px;
-    line-height: 1;
-    padding: 20px 0;
+.testimonial-description{
+    line-height: 1.6;
+    margin: 0 auto 40px ;
+    text-align: justify;
+    max-width: 700px;
 }
 
 .testimonial-quote{
-    text-align: left;
-    max-width: 1000px;
+    max-width: 800px;
+    text-align: center;
+    font-weight: normal;
+    margin: 0 auto;
 }
 
-.testimonial-quote cite{
-    font-size: 30px;
-    font-style:inherit;
-    color:#f76d37 ;
-    font-weight: bolder;
+.testimonial-quote blockquote{
+    margin: 0;
 }
 
-.testimonial-quote p{
+.testimonial-quote .quote p{
+
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 24px;
 }
+
+.testimonial-quote .author{
+    display: block;
+    margin-top: 16px;
+    text-align: right;
+    font-style: normal;
+    font-weight: 800;
+    color: #e85830;
+}
+
+.testimonial-quote blockquote::before{
+    content: "“";
+    display: block;
+    font-size: 48px;
+    line-height: 1;
+    color: #e85830;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+@media (min-width:768px){
+
+    .section_heading{
+        font-size: 40px;
+    }
+
+    .testimonial-description{
+        font-size: 17px;
+    }
+
+    .testimonial-quote .quote p{
+        font-size: 17px;
+    }
+
+    .testimonial-quote .author{
+        font-size: 17px;
+    }
+}
+
+@media (min-width:1024px){
+    .section_heading{
+        font-size: 55px;
+    }
+
+    .testimonial-description{
+        font-size: 18px;
+        line-height: 1.9;
+        max-width: 800px;
+        text-align: center;
+    }
+
+    .testimonial-quote .quote p{
+        font-size: 18px;
+        max-width: 900px;
+    }
+
+    .testimonial-quote .author{
+        font-size: 18px;
+    }
+}
+
 
 
 /*------------------------------ contact section-------------------------- */
 
 #contact{
-    background-color: white;
-    padding: 10px 0;
+    padding: 0;
+    background: white;
+    
 }
 
-#contact h2{
-    color: #f76d37;
-    font-size: 40px;
-    font-weight: 900px;
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-.contact-container{
+.contact-wrapper{
     display: flex;
+    flex-direction: column;
 }
 
 .contact-form{
     flex: 1;
-    background-image:url("../images/gallery/img-9.png");
+    padding: 40px 24px;
+    background-image: url("../images/gallery/img-9.png");
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
-    padding: 20px;
+    background-size: cover;
 }
 
 .contact-form input{
-    padding: 20px;
-    border-radius: 50px;
+    padding: 10px 0;
     width: 100%;
-    max-width: 90%;
 }
 
 .contact-form textarea{
-    padding: 40px;
-    border-radius: 40px;
+    padding: 20px 10px;
     width: 100%;
-    max-width: 90%;
 }
 
-.contact-form button{
-    padding: 20px 60px;
-    border-radius: 40px;
-    background-color:#e85830;
-    color: white;
-    
-}
-
-.contact-form input,.contact-form textarea{
-    margin: 10px auto;
+.contact-btn{
+    padding: 10px 20px;
 }
 
 .contact-map{
     flex: 1;
 }
+
 .contact-map iframe{
     width: 100%;
     height: 100%;
+    min-height: 300px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline: none;
+    border: 2px solid #88655c;
+}
+
+@media (min-width:768px) {
+    .contact-form input{
+        padding: 20px;
+    }
+
+    .contact-form textarea{
+        padding: 35px;
+    }
+
+    .contact-btn{
+        padding: 20px 40px;
+    }
+
+    .contact-map iframe{
+        min-height: 400px;
+    }
+}
+
+@media (min-width:1024px){
+    .contact-wrapper{
+        flex-direction: row;
+    }
 }
 
 /*------------------------------- footer section--------------------------------- */
 
-#footer{
-    background-color: #272727;
-    max-width: 100%;
-    height: auto;
-}
 
-.footer-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.footer-grid-item{
-    padding: 100px 0;
-    color: white;
-}
-
-.footer-grid-item h3{
-    font-size: 25px;
-    padding-bottom: 25px;
-}
-
-.footer-grid-item p{
-    line-height: 1.6;
-
-}
-
-.footer-grid-item a{
-    display: block;
-    color: white;
-    font-size: 15px;
-}
 
 
 

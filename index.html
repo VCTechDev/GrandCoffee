@@ -165,7 +165,7 @@
             <h2 class="section_heading">Testimonial</h2>
 
             <p class="testimonial-description">
-                Eeven slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
+                Eeven slightly believable. If you are going to use a passage of Lorem Ipsum
             </p>
 
             <div class="testimonial-quote">
@@ -177,9 +177,10 @@
                     be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum 
                     available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the
                     </p>
+                    <cite class="author"> Monila </cite>
                 </blockquote>
 
-                <cite class="author">Monila</cite>
+                
 
             </div>
 
@@ -188,29 +189,42 @@
 
 <!------------------------------------------------------Contact section----------------------------------------------------------------->
 
-    <!-- <section id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-container">
+    <section id="contact" class="section">
+        <h2 class="section_heading">Contact Us</h2>
+        
+        <div class="contact-wrapper">
+
             <div class="contact-form">
-                <form action="">
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="email" name="email" placeholder="Email">
-                    <input type="tel" name="phone" placeholder="Phone Number">
-                    <textarea name="message" id="message" placeholder="message"></textarea>
-                    <button>SEND</button>
+                <form>
+                    <label for="username" class="visually-hidden">Name</label>
+                    <input type="text" name="name" id="username" placeholder="Name"><br>
+
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email"><br>
+
+                    <label for="phone"  class="visually-hidden">Phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone Number"><br>
+
+                    <label for="message"  class="visually-hidden">Message</label>
+                    <textarea name="message" id="message" placeholder="message"></textarea><br>
+
+                    <button class="contact-btn" type="submit">SEND</button>
                 </form>
             </div>
-                <div class="contact-map">
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.184983809151!2d75.8314769748252!3d11.247798588931104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65b5c94b8f995%3A0x4357529d9b0a5170!2sHiLITE%20Business%20Park%2C%20near%20Tower%202%2C%20Poovangal%2C%20Pantheeramkavu%2C%20Kerala%20673014!5e0!3m2!1sen!2sin!4v1767860502250!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.1880519335346!2d75.83366500000004!3d11.247572700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65bbe4fc4cbf1%3A0xdce6506c7149d0aa!2sHiLITE%20Business%20Park%2C%202%2C%20Poovangal%2C%20Kozhikode%2C%20Pantheeramkavu%2C%20Kerala%20673014!5e0!3m2!1sen!2sin!4v1770280700585!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
         </div>
     </section>
-    </main> -->
+
+    </main>
 
 <!------------------------------------------------------Footer section starts here----------------------------------------------------------->
 
-    <!-- <footer id="footer">
-        <div class="footer-grid container">
+    <footer id="footer" class="section">
+        <div class="footer-grid">
 
             <div class="footer-grid-item">
                 <h3>About</h3>
@@ -220,7 +234,7 @@
                 </p>
             </div>
 
-            <div class="footer-grid-item">
+            <nav class="footer-grid-item" aria-label="Footer menu">
                 <h3>Menu</h3>
                 <ul>
                     <li><a href="">Home</a></li>
@@ -229,9 +243,9 @@
                     <li><a href="">Services</a></li>
                     <li><a href="">Contact Us</a></li>
                  </ul> 
-            </div>
+            </nav>
 
-            <div class="footer-grid-item">
+            <nav class="footer-grid-item" aria-label="Useful links">
                 <h3>Useful Link</h3>
                 <ul>
                     <li><a href="">Adipiscing</a></li>
@@ -240,20 +254,24 @@
                     <li><a href="">Tempor</a></li>
                     <li><a href="">incididunt</a></li>
                 </ul>
-            </div>
+            </nav>
 
             <div class="footer-grid-item">
                 <h3>Contact Us</h3>
                 <ul>
-                    <li><a href="">Address : Loram Ipusm</a></li>
-                    <li><a href="">Call : +01 1234567890</a></li>
-                    <li><a href="">Email : demo@gmail.com</a></li>
+                    <li>Address : Loram Ipusm</li>
+                    <li>Call : <a href="tel:+011234567890">+01 1234567890</a></li>
+                    <li>Email : <a href="mailto:demo@gmail.com">demo@gmail.com</a></li>
                 </ul>
             </div>
-
         </div>
-         <p>2020 All Rights Reserved. Design by Free html Templates</p> 
-     </footer> --> 
+
+        <div class="footer-bottom">
+            <p>@ 2026 GrandCoffee. All rights reserved </p>
+        </div>
+
+        
+     </footer> 
     
 
     <script src="css/script.js"></script>
