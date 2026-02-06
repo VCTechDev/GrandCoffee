@@ -409,9 +409,6 @@ header i{
         box-shadow: 0 10px 30px rgba(0,0,0,0.9);
     }
 
-    .gallery-item img:hover{
-        background-image: url("../images/icons/search-icon.png");
-    }
 }
 
 @media (min-width:768px){
@@ -768,6 +765,13 @@ header i{
     color: #ffffff;
 }
 
+.footer-bottom{
+    margin-top: 50px;
+    text-align: center;
+    padding: 16px;
+    font-size: 14px;
+}
+
 @media (min-width:768px){
     .footer-grid{
         grid-template-columns: repeat(2,1fr);
@@ -777,6 +781,10 @@ header i{
     .footer-grid-item{
         text-align: left;
     }
+
+    .footer-bottom{
+        font-size: 15px;
+    }
 }
 
 @media (min-width:1024px){
@@ -784,13 +792,12 @@ header i{
         grid-template-columns: repeat(4,1fr);
     }
 
+    .footer-bottom{
+        font-size: 17px;
+    }
 }
 
-.footer-bottom{
-    background-color: white;
-    color: #111;
-    text-align: center;
-    padding: 20px;
-}
+
+
 
 
